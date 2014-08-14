@@ -358,7 +358,7 @@ void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
 	char *time_format;
 
 	// TODO: Only update the date when it's changed.
-	strftime(date_text, sizeof(date_text), "%a %e %B", tick_time);
+	strftime(date_text, sizeof(date_text), "%a %e %b", tick_time);
 	
 	if (!response_mode_active)
 		text_layer_set_text(text_date_layer, date_text);
